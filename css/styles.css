@@ -6,7 +6,7 @@
 
 * {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   box-sizing: border-box;  
   font-family:  Quicksand-light;
 }
@@ -15,6 +15,9 @@
     --color-light: #f4f4f4;
     --color-dark: #333333;
     --color-orange: #ff6600;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
 }
 
 
@@ -23,7 +26,7 @@ html {
 }
 
 ol, ul {
-    list-style: none;
+    list-style: none;   
 }
 
 a {
@@ -39,11 +42,62 @@ a:hover {
 
 
 .hero {
-    background-image:  url(../images/motos/banner.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
+    url(../images/motos/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
     color: var(--color-light);
+    padding-inline: var(--spacing-md);
+    text-align: center;
+}
+
+.header-hero {
+    /* background-color: #dc123c; */
+    height: 100px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.menu-list {
+    display: flex;
+    gap: var(--spacing-md);    
+}
+
+.cta {
+    /* background-color: #dc123c; */
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+
+}
+
+.cta h2 {
+    font-size: 10vmin; /* pega 8% da tela*/
+    text-wrap: balance;
+}
+
+.cta p {
+    /* background-color: #ff6600; */
+    width: 70%;
+    line-height: 1.6; /*aumenta ou diminui a distancia entre as linhas*/
+    text-wrap: balance; /*quebra do texto - "balance" balancia a quantidade de palavras na linha*/
+}
+
+.btn {
+    border: 2px solid var(--color-orange);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 80px;
+    background-color: var(--color-orange);
+    transition: .5s; /*transicao pro hover*/
+}
+
+.btn:hover {
+    background-color: transparent;
 }
 
 section {
